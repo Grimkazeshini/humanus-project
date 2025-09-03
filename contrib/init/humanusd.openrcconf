@@ -1,0 +1,26 @@
+# /etc/conf.d/humanusd: config file for /etc/init.d/humanusd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/humanus/humanus.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/humanusd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/humanusd.pid"
+
+# Where to write humanusd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/humanusd"
+
+# User and group to own humanusd process
+#BITCOIND_USER="humanus"
+#BITCOIND_GROUP="humanus"
+
+# Path to humanusd executable
+#BITCOIND_BIN="/usr/bin/humanusd"
+
+# Nice value to run humanusd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

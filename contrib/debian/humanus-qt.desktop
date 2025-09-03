@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Humanus
+Comment=Humanus P2P Cryptocurrency
+Comment[fr]=Humanus, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Humanus, eşten eşe kriptografik sanal para birimi
+Exec=humanus-qt %u
+Terminal=false
+Type=Application
+Icon=humanus128
+MimeType=x-scheme-handler/humanus;
+Categories=Office;Finance;
