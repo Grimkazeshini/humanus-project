@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GodChain Final Dashboard with Rewards</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  <script type="module" src="main.js"></script>
+  <style>
+    body {
+      background: #111;
+      color: #eee;
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+    .card {
+      background: #222;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid #444;
+    }
+    input, button, textarea {
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+      border: none;
+    }
+    input, textarea {
+      width: 100%;
+      max-width: 500px;
+    }
+    button {
+      background: #3b82f6;
+      color: white;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+    button:hover {
+      background: #2563eb;
+    }
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+    .task, .proposal, .stake-status {
+      background: #333;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 GodChain Final Dashboard</h1>
+  
+  <!-- Wallet and Balance Section -->
+  <div class="card">
+    <button onclick="connectWallet()">Connect Wallet</button>
+    <p id="wallet">Wallet: Not connected</p>
+    <p id="balance">Balance: --</p>
+  </div>
+  
+  <!-- Identity Section -->
+  <div class="card">
+    <h2>🧬 Identity</h2>
+    <input id="handle" placeholder="Enter your handle" />
+    <input id="uri" placeholder="Enter metadata URI" />
+    <button onclick="createProfile()">Create/Update Profile</button>
+    <div id="identityView">No profile created yet.</div>
+  </div>
+  
+  <!-- Tasks Section -->
+  <div class="card">
+    <h2>🤖 Tasks</h2>
+    <textarea id="taskDesc" placeholder="Describe your task..."></textarea>
+    <!-- Bounty is now in GOD tokens -->
+    <input id="taskBounty" placeholder="Bounty in GOD" />
+    <button onclick="postTask()">Post Task</button>
+    <div id="taskList">Loading tasks...</div>
+  </div>
+  
+  <!-- Staking Section -->
+  <div class="card">
+    <h2>🔥 Staking</h2>
+    <input id="stakeAmount" placeholder="Enter stake amount" />
+    <button onclick="stake()">Stake</button>
+    <div id="stakeStatus">Loading staking information...</div>
+  </div>
+  
+  <!-- Proposals Section -->
+  <div class="card">
+  <h2>📜 Proposals</h2>
+  <input id="proposalText" placeholder="Type a new proposal" />
+  <button onclick="submitProposal()">Submit Proposal</button>
+  <div id="proposalList">Loading proposals...</div>
+</div>
+
+  
+  <!-- Optional: Debug Log Section for troubleshooting -->
+  <div class="card">
+    <h2>🔍 Debug Log</h2>
+    <pre id="debugLog">No logs yet.</pre>
+  </div>
+  
+  <script>
+    // Optional function to log messages to the debug log section
+    function debugLog(message) {
+      const log = document.getElementById("debugLog");
+      log.textContent += "\n" + message;
+    }
+  </script>
+</body>
+</html>

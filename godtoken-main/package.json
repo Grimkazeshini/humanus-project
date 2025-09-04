@@ -1,0 +1,15 @@
+{
+  "name": "godchain-phase-1",
+  "version": "1.0.0",
+  "description": "GodChain Phase 1: Token, DAO, Identity, AI Dev Bounty System",
+  "scripts": {
+    "test": "echo \"No test setup yet\" && exit 0"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "hardhat": "^2.21.0"
+  }
+}
